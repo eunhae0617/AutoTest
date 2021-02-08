@@ -1,0 +1,420 @@
+[
+	{	"DBMS": "Soha DB",
+		"NO": 0,
+		"CHECK": "DATA_STUDIO > SQL Editor 접속 ",
+		"DATE": "2021-02-04",
+		"Chrome Ver.": "88.0.4324.104",
+		"해상도(배율)": "1920*1080(100%)",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#dbmsCardTable > tbody > tr > td > div:nth-child(2) > div.db-content__title > span[title=${DBNAME}]","MS": 1000},
+			{"TYPE": 2, "SELECTOR": "$('#dbmsCardTable > tbody > tr > td > div:nth-child(2) > div.db-content__title > span[title=${DBNAME}]').parent('div').parent('div').parent('td').children('a').click();", "MS" : 1000},
+			{"TYPE": 3, "SELECTOR": "#editorTab > li:nth-child(2) > a > div"},
+			{"TYPE": 4, "KEY": "editorid"},
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]","MS":1000}
+			]
+	},
+	{ 
+		"NO": 1,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'TABLE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "테이블 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 2,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'VIEW' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "뷰 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 3,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'SYNONYM' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "시너님 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=SYNONYM]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 4,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'SEQUENCE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "시퀀스 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=SEQUENCE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 5,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'PROCEDURE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "프러시저 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PROCEDURE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 6,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'PACKAGE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "패키지 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PACKAGE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 7,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'FUNCTION' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "펑션 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=FUNCTION]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 8,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'TRIGGER' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "트리거 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TRIGGER]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 9,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'DBLINK' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "디비링크 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=DBLINK]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{ 
+		"NO": 10,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'JOB' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "잡 생성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=JOB]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 11,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'TABLE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "테이블 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]","MS":1000}
+			]
+	},
+	{
+		"NO": 12,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'VIEW'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "뷰 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]","MS":1000}
+			]
+	},
+	{
+		"NO": 13,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'SYNONYM'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "시너님 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=SYNONYM]","MS":1000}
+			]
+	},
+	{
+		"NO": 14,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'SEQUENCE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "시퀀스 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=SEQUENCE]","MS":1000}
+			]
+	},
+	{
+		"NO": 15,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'PROCEDURE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "프러시저 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PROCEDURE]","MS":1000}
+			]
+	},
+	{
+		"NO": 16,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'PACKAGE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "패키지 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PACKAGE]","MS":1000}
+			]
+	},
+	{
+		"NO": 17,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'FUNCTION'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "펑션 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=FUNCTION]","MS":1000}
+			]
+	},
+	{
+		"NO": 18,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'TRIGGER'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "트리거 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TRIGGER]","MS":1000}
+			]
+	},
+	{
+		"NO": 19,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'DBLINK'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "디비링크 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=DBLINK]","MS":1000}
+			]
+	},
+	{
+		"NO": 20,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'TABLE' > 테이블 명", 
+		"DEPTH_3": "클릭",
+		"CHECK": "해당 테이블 컬럼 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]","MS":1000}
+			]
+	},
+	{
+		"NO": 21,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "SCHEMA명 > 'VIEW' > 뷰 명", 
+		"DEPTH_3": "클릭",
+		"CHECK": "해당 뷰 컬럼 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]","MS":1000}
+			]
+	},
+	{
+		"NO": 22,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "SELECT 클릭",
+		"CHECK": "SELECT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(1)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 23,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "INSERT 클릭",
+		"CHECK": "INSERT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(2)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 24,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "UPDATE 클릭",
+		"CHECK": "UPDATE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(3)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 25,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "DELETE 클릭",
+		"CHECK": "DELETE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(4)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 26,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "DDL 클릭",
+		"CHECK": "DDL SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(5)", "MS" : 1500},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 27,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE'>테이블명>Edit Data ", 
+		"DEPTH_3": "클릭",
+		"CHECK": "에디트 화면이 열리는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(6)", "MS" : 2000}		
+			]
+	},
+	{
+		"NO": 28,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE'>테이블명>Edit Data(where) ", 
+		"DEPTH_3": "조건절 입력",
+		"CHECK": "조건절 입력을 하면 조건에 맞게 잘 실행 되는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(7)", "MS" : 1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('editWhereText').setValue('${EditorWhere}')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#editWhereFormOk", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000}	
+			]
+	},
+	{
+		"NO": 29,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "JSON 다운",
+		"CHECK": "JSON파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(1)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 30,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "CSV 다운",
+		"CHECK": "CSV파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(2)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 31,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "Excel 다운",
+		"CHECK": "Excel파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(3)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 32,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "XML 다운",
+		"CHECK": "XML파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(4)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 33,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "TXT 다운",
+		"CHECK": "TXT파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(5)", "MS" : 2000} 
+			]
+	},
+	{
+		"NO": 34,
+		"CHECK": "DATA_STUDIO > SQL Editor> Tab닫기",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR":"#editorTab > li:nth-child(2) > a > div", "MS": 1000},
+			{"TYPE": 1, "SELECTOR":"#editorTab > li:nth-child(2) > a > div + i", "MS" : 1000}			
+			]
+	}
+]

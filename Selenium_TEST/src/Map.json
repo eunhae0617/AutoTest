@@ -1,0 +1,84 @@
+[
+	{
+		"DBMS" : "MySQL",
+		"UserID" : "cuwon",
+		"UserPW" : "petra@one1",
+		"DBNAME": "mysql-db",
+		"Schema" : "acb",
+		"Table" : "STAR",
+		"CreateTable" : "STAR1",
+		"CopyTable" : "STAR2",
+		"ViewTable" : "testVieweayo",
+		"CreateView" : "TestView",
+		"EditorWhere": "SPRICE > 4000 AND SPRICE <8000;"
+	},
+	{
+		"DBMS" : "Oracle",
+ 		"DBNAME": "¿À¶óÅ¬db",
+		"Schema" : "EUNHAE",
+		"Table" : "STAR",
+		"SYNONYM" : "SN",
+		"CreateTable" : "STAR1",
+		"CopyTable" : "STAR2",
+		"RenameTable" : "NEW_STAR",
+		"ViewTable" : "TESTVIEW",
+		"CreateView" : "VIEWTEST",
+		"CreateSynonym" : "STAR_SYN",
+		"EditorWhere": "AGE>21"
+	},
+	{
+		"DBMS" : "PostgreSQL",
+ 		"DBNAME": "postgresql-db",
+		"Schema" : "testcase",
+		"Table" : "star",
+		"CreateUser" : "star",
+		"CreateDatabase" : "stardb",
+		"CreateSchema" : "starsch",
+		"CreateTable" : "star1",
+		"CopyTable" : "star2",
+		"RenameTable" : "new_star",
+		"ViewTable" : "starview",
+		"CreateView" : "viewtest",
+		"CreateSequence" : "seq_test",
+		"RenameSequence" : "star_seq",
+		"EditorWhere": "AGE >= \'22\'"
+	},
+	{
+		"DBMS" : "Redshift",
+ 		"DBNAME": "redshift-db",
+		"Schema" : "testcase",
+		"Table" : "star",
+		"CreateUser" : "staruse",
+		"CreateDatabase" : "stardb",
+		"RenameDatabase" : "stardatabase",
+		"CreateSchema" : "testsch",
+		"RenameSchema" : "starsch",
+		"CreateTable" : "star1",
+		"CopyTable" : "star2",
+		"RenameTable" : "new_star",
+		"ViewTable" : "starview",
+		"CreateView" : "viewtest",
+		"EditorWhere": "AGE >= 22"
+	},
+	{
+		"DBMS" : "SQLserver",
+ 		"DBNAME": "asdasfsf",
+		"Schema" : "testcase",
+		"Table" : "star",
+		"CreateDatabase" : "star_db",
+		"CreateSchema" : "testsch",
+		"CreateTable" : "star1",
+		"CopyTable" : "star2",
+		"ViewTable" : "starview",
+		"CreateView" : "viewtest",
+		"EditorWhere": "AGE >= 22"
+	},
+	{
+		"DBMS" : "Soha DB",
+ 		"DBNAME": "r41004",
+		"Schema" : "dgadmin",
+		"Table" : "DUAL",
+		"EditorWhere": "c1 = 1"
+	}
+	
+]	
