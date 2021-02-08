@@ -1,0 +1,1519 @@
+[	
+	{	"DBMS": "MySQL",
+		"NO": 0,
+		"CHECK": "DATA_STUDIO > SQL Editor 접속 ",
+		"DATE": "2021-02-01",
+		"Chrome Ver.": "88.0.4324.104",
+		"해상도(배율)": "1920*1080(100%)",
+		"OPER_LIST": [
+			{"TYPE": 0, "SELECTOR": "#userId", "VALUE": "${UserID}", "MS": 1000},
+			{"TYPE": 0, "SELECTOR": "#password", "VALUE": "${UserPW}", "MS": 1000 },
+			{"TYPE": 1, "SELECTOR": "#loginBtn", "MS":1000},
+			{"TYPE": 3, "SELECTOR": "#tab_home > div:nth-child(2) > div.db-connection-wrapper > div.card-title__db"},
+			{"TYPE": 1, "SELECTOR": "#dbmsCardTable > tbody > tr > td > div:nth-child(2) > div.db-content__title > span[title=${DBNAME}]","MS": 1000},
+			{"TYPE": 2, "SELECTOR": "$('#dbmsCardTable > tbody > tr > td > div:nth-child(2) > div.db-content__title > span[title=${DBNAME}]').parent('div').parent('div').parent('td').children('a').click();", "MS" : 1000},
+			{"TYPE": 3, "SELECTOR": "#editorTab > li:nth-child(2) > a > div"},
+			{"TYPE": 4, "KEY": "editorid"},
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]","MS":1000}
+			]
+	},
+	{ 
+		"NO": 1,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'TABLE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "테이블 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 2,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'VIEW' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "뷰 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 3,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'PROCEDURE' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "프러시저 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PROCEDURE]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 4,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'FUNCTION' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "펑션 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=FUNCTION]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 5,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'TRIGGER' > 생성", 
+		"DEPTH_3": "클릭",
+		"CHECK": "트리거 생성 SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TRIGGER]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(1)","MS":1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 6,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'TABLE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "테이블 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]","MS":1000}
+			]
+	},
+	{
+		"NO": 7,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'VIEW'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "뷰 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]","MS":1000}
+			]
+	},
+	{
+		"NO": 8,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'PROCEDURE'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "프러시저 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=PROCEDURE]","MS":1000}
+			]
+	},
+	{
+		"NO": 9,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'FUNCTION'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "펑션 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=FUNCTION]","MS":1000}
+			]
+	},
+	{
+		"NO": 10,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'TRIGGER'", 
+		"DEPTH_3": "클릭",
+		"CHECK": "트리거 명 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TRIGGER]","MS":1000}
+			]
+	},
+	{
+		"NO": 11,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "DB > 'TABLE' > 테이블명", 
+		"DEPTH_3": "클릭",
+		"CHECK": "테이블 내의 존재하는 컬럼 리스트가 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]","MS":1000}
+			]
+	},
+	{
+		"NO": 12,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "SELECT 클릭",
+		"CHECK": "SELECT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(1)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 13,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "INSERT 클릭",
+		"CHECK": "INSERT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(2)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 14,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "UPDATE 클릭",
+		"CHECK": "UPDATE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(3)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 15,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "DELETE 클릭",
+		"CHECK": "DELETE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(4)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 16,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE' > 테이블명 > Auto Script", 
+		"DEPTH_3": "DDL 클릭",
+		"CHECK": "DDL SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(5)", "MS" : 1500},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 17,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE'>테이블명>Edit Data ", 
+		"DEPTH_3": "클릭",
+		"CHECK": "에디트 화면이 열리는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(6)", "MS" : 2000}		
+			]
+	},
+	{
+		"NO": 18,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'TABLE'>테이블명>Edit Data(where) ", 
+		"DEPTH_3": "조건절 입력",
+		"CHECK": "조건절 입력을 하면 조건에 맞게 잘 실행 되는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(7)", "MS" : 1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('editWhereText').setValue('${EditorWhere}')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#editWhereFormOk", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000}	
+			]
+	},
+	{
+		"NO": 19,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "JSON 다운",
+		"CHECK": "JSON파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(1)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 20,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "CSV 다운",
+		"CHECK": "CSV파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(2)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 21,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "Excel 다운",
+		"CHECK": "Excel파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(3)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 22,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "XML 다운",
+		"CHECK": "XML파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(4)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 23,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": "  'TABLE'> 테이블명> Export ", 
+		"DEPTH_3": "TXT 다운",
+		"CHECK": "TXT파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${Table}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(5)", "MS" : 2000} 
+			]
+	},
+	{
+		"NO": 24,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW' > 뷰명 > Auto Script", 
+		"DEPTH_3": "SELECT 클릭",
+		"CHECK": "SELECT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(1)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 25,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW' > 뷰명 > Auto Script", 
+		"DEPTH_3": "INSERT 클릭",
+		"CHECK": "INSERT SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(2)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 26,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW' > 뷰명 > Auto Script", 
+		"DEPTH_3": "UPDATE 클릭",
+		"CHECK": "UPDATE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(3)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 27,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW' > 뷰명 > Auto Script", 
+		"DEPTH_3": "DELETE 클릭",
+		"CHECK": "DELETE SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(4)", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 28,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW' > 뷰명 > Auto Script", 
+		"DEPTH_3": "DDL 클릭",
+		"CHECK": "DDL SQL문 작성이 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(5)", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "li.context-menu-item.context-menu-submenu.context-menu-visible > ul > li:nth-child(5)", "MS" : 1500},
+			{"TYPE": 5, "SELECTOR": "#linedText_${editorid} > div.ace_scroller > div","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}		
+			]
+	},
+	{
+		"NO": 29,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW'> 뷰명> Export ", 
+		"DEPTH_3": "JSON 다운",
+		"CHECK": "JSON파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(1)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 30,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW'> 뷰명> Export ", 
+		"DEPTH_3": "CSV 다운",
+		"CHECK": "CSV파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(2)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 31,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW'> 뷰명> Export ", 
+		"DEPTH_3": "Excel 다운",
+		"CHECK": "Excel파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(3)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 32,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW'> 뷰명> Export ", 
+		"DEPTH_3": "XML 다운",
+		"CHECK": "XML파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(4)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 33,
+		"DEPTH_1": "왼쪽 오브젝트 뷰어",
+		"DEPTH_2": " 'VIEW'> 뷰명> Export ", 
+		"DEPTH_3": "TXT 다운",
+		"CHECK": "TXT파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=VIEW]+ul>li>a[title=${ViewTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(8) > ul > li:nth-child(5)", "MS" : 2000} 
+			]
+	},
+	{
+		"NO": 34,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "LENGTH()", 
+		"DEPTH_3": "SELECT LENGTH(\"abcdefg\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT LENGTH(\"abcdefg\")')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 35,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CONCAT()", 
+		"DEPTH_3": "SELECT CONCAT(\"2345678\", \"dksfle\", \"가나아라\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT CONCAT(\"2345678\", \"dksfle\", \"가나아라\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 36,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "LOCATE()", 
+		"DEPTH_3": "SELECT LOCATE (\"12345678\", \"123456712345123456789\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT LOCATE (\"12345678\", \"123456712345123456789\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 37,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "LEFT()", 
+		"DEPTH_3": "SELECT LEFT(\"MySQL is an open source relational database management system\", 5);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT LEFT(\"MySQL is an open source relational database management system\", 5);')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 38,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "RIGHT()", 
+		"DEPTH_3": "SELECT RIGHT(\"MySQL is an open source relational database management system\", 6);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT RIGHT(\"MySQL is an open source relational database management system\", 6);')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 39,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "LOWER()", 
+		"DEPTH_3": "SELECT LOWER(\"MySQL is an open source relational database management system\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT LOWER(\"MySQL is an open source relational database management system\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 40,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "UPPER()", 
+		"DEPTH_3": "SELECT UPPER(\"MySQL is an open source relational database management system\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT UPPER(\"MySQL is an open source relational database management system\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 41,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "REPLACE()", 
+		"DEPTH_3": "SELECT REPLACE(\"mssql\", \"ms\", \"my\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT REPLACE(\"mssql\", \"ms\", \"my\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 42,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "TRIM()", 
+		"DEPTH_3": "SELECT TRIM(LEADING \"$\" from \"$$##^&OH MY GOD%##$\");",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT TRIM(LEADING \"$\" from \"$$##^&OH MY GOD%##$\"),TRIM(TRAILING \"$\" from \"$$##^&OH MY GOD%##$\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 43,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "FORMAT()", 
+		"DEPTH_3": "SELECT FORMAT(1213143242314341.123143255 , 3);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT FORMAT(1213143242314341.123143255 , 3);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 44,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "FLOOR(),CEIL(),ROUND()", 
+		"DEPTH_3": "SELECT FLOOR(12.45), CEIL(23.56), ROUND(45.67);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT FLOOR(12.45), CEIL(23.56), ROUND(45.67);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 45,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SQRT(), POW(), EXP(), LOG()", 
+		"DEPTH_3": "SELECT SQRT(4), POW(2,4), EXP(3), LOG(3);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SQRT(4), POW(2,4), EXP(3), LOG(3);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 46,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SIN(), COS(), TAN()", 
+		"DEPTH_3": "SELECT SIN(PI()/2), COS(PI()), TAN(PI()/4);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SIN(PI()/2), COS(PI()), TAN(PI()/4);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 47,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ABS()", 
+		"DEPTH_3": "SELECT ABS(-3);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT ABS(-3);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 48,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ROUND(RAND())", 
+		"DEPTH_3": "SELECT ROUND(RAND()*100,0);",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT ROUND(RAND()*100,0);')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 49,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "NOW()", 
+		"DEPTH_3": "SELECT NOW();",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT NOW();')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 50,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CURDATE()", 
+		"DEPTH_3": "SELECT CURDATE();",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT CURDATE();')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 51,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CURTIME()", 
+		"DEPTH_3": "SELECT CURTIME();",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT CURTIME();')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 52,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DATE()", 
+		"DEPTH_3": "SELECT DATE(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DATE(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 53,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "MONTH()", 
+		"DEPTH_3": "SELECT MONTH(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT MONTH(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 54,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DAY()", 
+		"DEPTH_3": "SELECT DAY(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DAY(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 55,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "HOUR()", 
+		"DEPTH_3": "SELECT HOUR(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT HOUR(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 56,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "MINUTE()", 
+		"DEPTH_3": "SELECT MINUTE(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT MINUTE(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 57,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SECOND()", 
+		"DEPTH_3": "SELECT SECOND(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SECOND(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 58,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "MONTHNAME()", 
+		"DEPTH_3": "SELECT MONTHNAME(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT MONTHNAME(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 59,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DAYNAME()", 
+		"DEPTH_3": "SELECT DAYNAME(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DAYNAME(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 60,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DAYOFWEEK()", 
+		"DEPTH_3": "SELECT DAYOFWEEK(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DAYOFWEEK(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 61,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DAYOFMONTH()", 
+		"DEPTH_3": "SELECT DAYOFMONTH(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DAYOFMONTH(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 62,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DAYOFYEAR()", 
+		"DEPTH_3": "SELECT DAYOFYEAR(NOW());",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DAYOFYEAR(NOW());')", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 1000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 63,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DATE_FORMAT()", 
+		"DEPTH_3": "SELECT DATE_FORMAT(NOW(), '%D %y %a %d %m %n %j' );",
+		"CHECK": "형식의 맞게 반환하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DATE_FORMAT(NOW(), \"%D %y %a %d %m %n %j\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 64,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SHOW DATABASES", 
+		"DEPTH_3": "SHOW DATABASES;",
+		"CHECK": "DB 목록을 보여주는가?  ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SHOW DATABASES;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 65,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SHOW TABLES", 
+		"DEPTH_3": "SHOW TABLES;",
+		"CHECK": "지정 DB의 테이블 목록을 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SHOW TABLES;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 66,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SHOW TABLE STATUS", 
+		"DEPTH_3": "SHOW TABLE STATUS;",
+		"CHECK": "데이터베이스의 지정 테이블 정보를 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SHOW TABLE STATUS;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 67,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DESCRIBE(DESC)", 
+		"DEPTH_3": "DESC ${Schema}.${Table};",
+		"CHECK": "테이블의 컬럼 정보를 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DESC ${Table};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 68,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CREATE DATABASE", 
+		"DEPTH_3": "CREATE DATABASE ABC;",
+		"CHECK": "데이터베이스를 생성하는가?  ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE DATABASE ABC;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 69,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DROP DATABASE", 
+		"DEPTH_3": "DROP DATABASE ABC;",
+		"CHECK": "데이터 베이스를 삭제하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DROP DATABASE ABC;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 70,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "USE ", 
+		"DEPTH_3": "USE ${Schema};",
+		"CHECK": "요구하는 데이터를 가져오는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('USE ${Schema};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 71,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CREATE TABLE", 
+		"DEPTH_3": "CREATE TABLE ${CreateTable} (SNAME varchar(10), SPRICE int(6), SOPEN date);",
+		"CHECK": "테이블을 생성하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE TABLE ${CreateTable}(SNAME varchar(10), SPRICE int(6), SOPEN date);')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 72,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "INSERT", 
+		"DEPTH_3": "INSERT INTO ${CreateTable}(SNAME, SPRICE, SOPEN) VALUES (\"영희\", 3000, \"2021-01-01\")...",
+		"CHECK": " 조건의 맞게 데이터를 삽입하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('INSERT INTO ${CreateTable}(SNAME, SPRICE, SOPEN) VALUES (\"영희\", 3000, \"20210101\"),(\"철수\", 4000, \"20210101\"),(\"가\", 4030, \"20210112\"),(\"나\", 4030, \"20210102\"),(\"다\", 5000, \"20210103\"),(\"라\", 5002, \"20210103\"),(\"마\", 5002, \"20210104\"),(\"Nae\", 5800, \"20210104\"),(\"na\", 5800, \"20210105\"),(\"Do\", 8000, \"20210105\"),(\"ya\", 7500, \"20210106\"),(\"DOYOU\", 5002, \"20210106\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 73,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CREATE TABLE AS SELECT", 
+		"DEPTH_3": "CREATE TABLE ${CopyTable} AS SELECT * FROM ${CreateTable}",
+		"CHECK": "테이블을 똑같이 생성하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE TABLE ${CopyTable} AS SELECT * FROM ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 74,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "INSERT INTO SELECT", 
+		"DEPTH_3": "INSERT INTO ${CopyTable} SELECT * FROM ${CreateTable};",
+		"CHECK": "테이블 데이터를 다른 테이블로 복사하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('INSERT INTO ${CopyTable} SELECT * FROM ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 75,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "UPDATE", 
+		"DEPTH_3": "UPDATE ${CreateTable} SET SNAME = \"YANG\" ,SPRICE = 7700 ,SOPEN = \"2021-01-07\" WHERE SPRICE=8000;",
+		"CHECK": "입력 값 변경하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('UPDATE ${CreateTable} SET SNAME = \"YANG\" ,SPRICE = 7700 ,SOPEN = \"2021-01-07\" WHERE SPRICE=8000;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 76,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DELETE", 
+		"DEPTH_3": "DELETE FROM ${CreateTable} WHERE SNAME IN (\"YANG\",\"doo\");",
+		"CHECK": "행 단위로 데이터를 삭제하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DELETE FROM ${CreateTable} WHERE SNAME IN (\"YANG\",\"doo\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 77,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ALTER TABLE ADD", 
+		"DEPTH_3": "ALTER TABLE ${CreateTable} ADD col3 INT NULL;",
+		"CHECK": "테이블 구조를 변경하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('ALTER TABLE ${CreateTable} ADD col3 INT NULL;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 78,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ALTER TABLE MODIFY", 
+		"DEPTH_3": "ALTER TABLE ${CreateTable} MODIFY col3 VARCHAR(20) NULL;",
+		"CHECK": "테이블 구조를 변경하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('ALTER TABLE ${CreateTable} MODIFY col3 VARCHAR(20) NULL;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 79,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ALTER TABLE DROP", 
+		"DEPTH_3": "ALTER TABLE ${CreateTable} DROP col3;",
+		"CHECK": "테이블 구조를 변경하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('ALTER TABLE ${CreateTable} DROP col3;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 80,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CREATE INDEX", 
+		"DEPTH_3": "CREATE INDEX Col1Idx ON ${CreateTable}(SNAME);",
+		"CHECK": "인덱스를 생성하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE INDEX Col1Idx ON ${CreateTable}(SNAME);')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 81,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "UNIQUE INDEX", 
+		"DEPTH_3": "CREATE UNIQUE INDEX Col2Idx ON ${CreateTable}(SNAME);",
+		"CHECK": "중복 값을 허용하지 않는 인덱스를 생성하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE UNIQUE INDEX Col2Idx ON ${CreateTable}(SNAME);')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 82,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "SHOW INDEX", 
+		"DEPTH_3": "SHOW INDEX FROM ${CreateTable};",
+		"CHECK": "인덱스를 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SHOW INDEX FROM ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 83,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "INDEX ALTER", 
+		"DEPTH_3": "ALTER TABLE ${CreateTable} DROP INDEX Col2Idx;",
+		"CHECK": "인덱스를 삭제하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('ALTER TABLE ${CreateTable}DROP INDEX Col2Idx;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 84,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DROP INDEX", 
+		"DEPTH_3": "DROP INDEX Col1Idx ON ${CreateTable};",
+		"CHECK": "인덱스를 삭제하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DROP INDEX Col1Idx ON ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 85,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "CREATE VIEW", 
+		"DEPTH_3": "CREATE VIEW ${Schema}.${CreateView} AS  SELECT SNAME, SPRICE FROM ${CreateTable};",
+		"CHECK": "뷰를 생성하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('CREATE VIEW ${Schema}.${CreateView} AS  SELECT SNAME, SPRICE FROM ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 86,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ALTER VIEW", 
+		"DEPTH_3": "ALTER VIEW ${Schema}.${CreateView} AS SELECT SNAME, SPRICE, SOPEN FROM ${CreateTable};",
+		"CHECK": "뷰를 수정하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('ALTER VIEW ${Schema}.${CreateView} AS SELECT SNAME, SPRICE, SOPEN FROM ${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 87,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DROP VIEW", 
+		"DEPTH_3": "DROP VIEW ${Schema}.${CreateView};",
+		"CHECK": "뷰를 삭제하는가? ",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DROP VIEW ${Schema}.${CreateView};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 88,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "WHERE", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CopyTable} WHERE SPRICE > 3000 AND SPRICE <8000;",
+		"CHECK": "특정 조건에 맞는 데이터만 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CopyTable} WHERE SPRICE > 3000 AND SPRICE <8000;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 89,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "BETWEEN", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CopyTable} WHERE SPRICE BETWEEN 3000 AND 8000;",
+		"CHECK": "지정한 범위내의 데이터만 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CopyTable} WHERE SPRICE BETWEEN 3000 AND 8000;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 90,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "IN", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CopyTable} WHERE SNAME IN(\"영희\", \"철수\", \"가\");",
+		"CHECK": "지정한 값의 데이터만 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CopyTable} WHERE SNAME IN(\"영희\", \"철수\", \"가\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 91,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "LIKE (%)", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CopyTable} WHERE SNAME LIKE \"영_%\";",
+		"CHECK": "특정 문자가 포함되어 있는 데이터를 검색하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CopyTable} WHERE SNAME LIKE \"영_%\";')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 92,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "Sub Query", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CreateTable} WHERE SPRICE = (SELECT SPRICE FROM ${Schema}.${CreateTable} WHERE SNAME = \"ya\");",
+		"CHECK": "특정 조회결과를 다른 조회에서 조건검색이 가능한가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CreateTable} WHERE SPRICE = (SELECT SPRICE FROM ${Schema}.${CreateTable} WHERE SNAME = \"ya\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 93,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "Sub Query - ANY", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CreateTable} WHERE SPRICE = ANY (SELECT SPRICE FROM ${Schema}.${CreateTable} WHERE SNAME = \"DOYOU\")",
+		"CHECK": "여러개의 결과 중 한가지만 만족해도 출력하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CreateTable} WHERE SPRICE = ANY (SELECT SPRICE FROM ${Schema}.${CreateTable} WHERE SNAME = \"DOYOU\");')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 94,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "Sub Query - ALL", 
+		"DEPTH_3": "SELECT *FROM ${Schema}.${CopyTable} WHERE SPRICE > ALL ( SELECT SPRICE FROM ${Schema}.${CopyTable} WHERE SNAME = \"na\" );",
+		"CHECK": "여러개의 결과 모두 만족시키는 값을 출력하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT *FROM ${Schema}.${CopyTable} WHERE SPRICE > ALL ( SELECT SPRICE FROM ${Schema}.${CopyTable} WHERE SNAME = \"na\" );')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 95,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ORDER BY, LIMIT", 
+		"DEPTH_3": "SELECT *FROM ${Schema}.${CopyTable} ORDER BY SPRICE ASC LIMIT 10;",
+		"CHECK": "결과 출력 순을 조절해서 실행 하는가?,출력 개수 제한을 실행 하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT *FROM ${Schema}.${CopyTable} ORDER BY SPRICE ASC LIMIT 10;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 96,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DISTINCT", 
+		"DEPTH_3": "SELECT DISTINCT SPRICE FROM ${Schema}.${CopyTable};",
+		"CHECK": "중복  된 값은 제거하고 실행주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT DISTINCT SPRICE FROM ${Schema}.${CopyTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 97,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "GROUP BY", 
+		"DEPTH_3": "SELECT SOPEN, AVG(SPRICE) AS \"평균\" FROM ${Schema}.${CopyTable} GROUP BY SOPEN;",
+		"CHECK": "그룹화를 하여 데이터를 실행하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SOPEN, AVG(SPRICE) AS \"평균\" FROM ${Schema}.${CopyTable} GROUP BY SOPEN;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 98,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "HAVING", 
+		"DEPTH_3": "SELECT SNAME, MAX(SPRICE) FROM ${Schema}.${CopyTable} GROUP BY SNAME HAVING MAX(SPRICE) >5000;",
+		"CHECK": "데이터를 조건에 맞게 실행하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SNAME, MAX(SPRICE) FROM ${Schema}.${CopyTable} GROUP BY SNAME HAVING MAX(SPRICE) >5000;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 99,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "ROLLUP", 
+		"DEPTH_3": "SELECT SNAME, SUM(SPRICE) FROM ${Schema}.${CopyTable} GROUP BY SNAME WITH ROLLUP;",
+		"CHECK": "데이터의 소계,합계 값을 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT SNAME, SUM(SPRICE) FROM ${Schema}.${CopyTable} GROUP BY SNAME WITH ROLLUP;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 100,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "JOIN", 
+		"DEPTH_3": "SELECT * FROM ${Schema}.${CopyTable} JOIN ${Schema}.${CreateTable} ON ${Schema}.${CopyTable}.SNAME = ${Schema}.${CreateTable}.SNAME;",
+		"CHECK": "여러 테이블을 조합하여 하나의 테이블로 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('SELECT * FROM ${Schema}.${CopyTable} JOIN ${Schema}.${CreateTable} ON ${Schema}.${CopyTable}.SNAME = ${Schema}.${CreateTable}.SNAME;')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 101,
+		"DEPTH_1": "EditData or Select 테이블",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Reload",
+		"CHECK": "새로 고침 시 수정한 내용이 반영되어 보여지는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]","MS":1000},
+			{"TYPE": 1, "SELECTOR": "#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]","MS":1000},
+			{"TYPE": 2, "SELECTOR": "document.querySelector('#objectTree_${editorid}_2_ul>li>a[title=${Schema}]+ul>li>a[title=TABLE]+ul>li>a[title=${CopyTable}]').dispatchEvent(new MouseEvent('contextmenu', {bubbles : true}))","MS":1000},
+			{"TYPE": 1, "SELECTOR": ".context-menu-root>li:nth-child(6)", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#rowEditRollbackBtn_${editorid}", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 102,
+		"DEPTH_1": "EditData or Select 테이블",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Export JSON",
+		"CHECK": "JSON파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#reportBtn_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "body > ul > li:nth-child(1)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 103,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Export CSV",
+		"CHECK": "CSV파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#reportBtn_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "body > ul > li:nth-child(2)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 104,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Export Excel",
+		"CHECK": "Excel 파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#reportBtn_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "body > ul > li:nth-child(3)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 105,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Export XML",
+		"CHECK": "XML파일로 변환 후 다운 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#reportBtn_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "body > ul > li:nth-child(4)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 106,
+		"DEPTH_1": "EditData or Select 테이블",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Export TXT",
+		"CHECK": "TXT 파일로 변환 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#reportBtn_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "body > ul > li:nth-child(5)", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 107,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Expand Result",
+		"CHECK": "테이블 뷰 화면이 확대 및 축소 되는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#resultExpandBtn_${editorid}", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultExpandBtn_${editorid}", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 108,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Cell Value",
+		"CHECK": "Cell Value창을 열어주는가?",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR": "#resultValPanelBtn_${editorid}", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#saveCellVal_${editorid}", "MS" : 1000},
+			{"TYPE": 1, "SELECTOR": "#resultValPanelBtn_${editorid}", "MS" : 2000}
+			]
+	},
+	{
+		"NO": 109,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Fetch Size",
+		"CHECK": "입력한 수만큼의 데이터 행을 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "$('#fetchSize_${editorid}').val(\"100\")", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#tab_${editorid} > div.card.sql-wrapper > div.result-wrapper", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 110,
+		"DEPTH_1": "EditData or Select 테이블 ",
+		"DEPTH_2": "테이블 뷰", 
+		"DEPTH_3": "Search",
+		"CHECK": "검색한 값의 테이블 내의 데이터를 보여주는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "$('#resultTableWrapper_${editorid} > div.petra-grid-search > input').val(\"라\")", "MS" : 2000},
+			{"TYPE": 0, "SELECTOR": "#resultTableWrapper_${editorid} > div.petra-grid-search > input", "VALUE" : "\ue007", "MS": 1000}
+			]
+	},	
+	{
+		"NO": 111,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "TRUNCATE", 
+		"DEPTH_3": "TRUNCATE TABLE ${Schema}.${CreateTable};",
+		"CHECK": "데이터를 삭제하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('TRUNCATE TABLE ${Schema}.${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 112,
+		"DEPTH_1": "SQL문",
+		"DEPTH_2": "DROP TABLE", 
+		"DEPTH_3": "DROP TABLE ${Schema}.${CopyTable}; DROP TABLE ${Schema}.${CreateTable};",
+		"CHECK": "테이블을 삭제하는가?",
+		"OPER_LIST": [
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('DROP TABLE ${Schema}.${CopyTable}; DROP TABLE ${Schema}.${CreateTable};')", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#executeBtn_${editorid}> i", "MS" : 2000},
+			{"TYPE": 1, "SELECTOR": "#resultTab_${editorid}> li:nth-child(3) > a", "MS" : 2000},
+			{"TYPE": 5, "SELECTOR": "#systemInfoArea_${editorid}","STRING": "string","MS" :1000},
+			{"TYPE": 2, "SELECTOR": "ace.edit('linedText_${editorid}').setValue('')", "MS" : 1000}
+			]
+	},
+	{
+		"NO": 113,
+		"CHECK": "DATA_STUDIO > SQL Editor> Tab닫기",
+		"OPER_LIST": [
+			{"TYPE": 1, "SELECTOR":"#editorTab > li:nth-child(2) > a > div", "MS": 1000},
+			{"TYPE": 1, "SELECTOR":"#editorTab > li:nth-child(2) > a > div + i", "MS" : 1000}			
+			]
+	}
+]
